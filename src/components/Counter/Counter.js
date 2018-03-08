@@ -1,42 +1,44 @@
-import React, {Component} from 'react';
-import {increment, decrement, reset} from '../../actions/counter';
+import React, { Component } from "react";
+import { increment, decrement, reset } from "../../actions/counter";
 
-import {connect} from 'react-redux';
+import { connect } from "react-redux";
 
 class Counter extends Component {
-    render() {
-        return (
-            <div>
-                <div>当前计数为{this.props.counter.count}</div>
-                <button onClick={() => this.props.increment()}>自增
-                </button>
-                <button onClick={() => this.props.decrement()}>自减
-                </button>
-                <button onClick={() => this.props.reset()}>重置
-                </button>
-            </div>
-        )
+  constructor(){
+      super(...arguments);
+    this.state = {
+      count: 0
     }
+    this.increment = this.increment.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    console.log('%c enter componentWillReceiveProps: ' + this.props.caption + ' nextProp: ' + nextProps.caption, 'color: #28a745');
+  }
+
+  shouldComponentUpdate(nextProps, nextState){
+    console.log(`%c enter shouldComponentUpdate, nextProp: ${nextProps.caption}, nextState: ${nextState.count}`, 'color: #28a745');
+    return (nextProps.caption !== this.props.caption) || (nextState.count !==this.state.count); 
 }
 
-const mapStateToProps = (state) => {
-    return {
-        counter: state.counter
-    }
-};
+  render() {
+    console.log('%c enter render', 'color: #28a745');    
+    return (
+      <div>
+        <div>当前计数为{this.state.count}</div>
+        <button className="btn btn-light" onClick={() => this.increment()}>自增</button>
+        <button className="btn btn-light" onClick={ () => this.props.changeProps() }>
+          Click me to set props!
+        </button>
+      </div>
+    );
+  }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        increment: () => {
-            dispatch(increment())
-        },
-        decrement: () => {
-            dispatch(decrement())
-        },
-        reset: () => {
-            dispatch(reset())
-        }
-    }
-};
+  increment() {
+    this.setState({
+        count: this.state.count + 1
+    })
+  }
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default Counter;

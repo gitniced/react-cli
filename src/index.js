@@ -9,16 +9,16 @@ import combineReducers from './reducers/reducers';
 import thunkMiddleware from 'redux-thunk';
 
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import Home from 'pages/Home/Home'; 
+import App from 'pages/App/App'; 
 import './index.scss';
 let store = createStore(combineReducers, applyMiddleware(thunkMiddleware));
 
-renderWithHotReload(Home);
+renderWithHotReload(App);
 
 /*热更新*/
 if (module.hot) {
-  module.hot.accept('pages/Home/Home', () => {
-      const getRouter = require('pages/Home/Home').default;
+  module.hot.accept('pages/App/App', () => {
+      const getRouter = require('pages/App/App').default;
       renderWithHotReload(getRouter);
   });
 }

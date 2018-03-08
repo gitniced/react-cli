@@ -49,9 +49,6 @@ const commonConfig = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'runtime'
-    }),
   ],
   resolve: {
     alias: {

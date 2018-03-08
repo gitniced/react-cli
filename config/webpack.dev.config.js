@@ -24,7 +24,7 @@ const devConfig = {
     rules: []
   },
   devServer: {
-    port: 5432,
+    port: 3000,
     contentBase: resolve('dist'),
     historyApiFallback: true,
     host: '0.0.0.0',
