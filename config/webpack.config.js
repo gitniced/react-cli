@@ -12,7 +12,7 @@ function resolve (dir) {
   return path.join(__dirname, '../', dir);
 }
 
-module.exports = {
+publicConfig = {
   devtool: 'cheap-module-source-map',
   module: {
     rules: []

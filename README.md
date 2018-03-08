@@ -23,6 +23,16 @@ A: 是对ES7一些提案的支持, stage-0包含stage-1, stage-2以及stage-3的
 
 
 ## React
-
+<code>React</code> 将组件渲染，并且构造 DOM 元素然后塞入页面的过程称为组件的挂载.
+``` 挂载阶段生命周期
+-> constructor()
+-> componentWillMount()
+-> render()
+// 然后构造 DOM 元素插入页面
+-> componentDidMount()
+...
+// 即将从页面中删除
+-> componentWillUnmount()
+```
 
 ## React-router

@@ -23,17 +23,9 @@ const devConfig = {
   module: {
     rules: []
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: resolve('src/index.html')
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'manifest'
-    })
-  ],
   devServer: {
-    contentBase: path.join(__dirname, './dist'),
+    port: 5432,
+    contentBase: resolve('dist'),
     historyApiFallback: true,
     host: '0.0.0.0',
   },

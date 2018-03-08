@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Counter from 'component/Counter/Counter';
+import Counter from 'components/Counter/Counter';
 
 export default class Mall extends Component {
     render() {

@@ -56,7 +56,7 @@ const commonConfig = {
   resolve: {
     alias: {
       pages:  resolve('src/pages'),
-      component: resolve('src/components'),
+      components: resolve('src/components'),
       router: resolve('src/router')
     }
   }
