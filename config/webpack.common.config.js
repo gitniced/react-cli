@@ -47,7 +47,8 @@ const commonConfig = {
     }),
     new webpack.HashedModuleIdsPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor'
+      name: 'vendor',
+      minChunks: 5
     }),
   ],
   resolve: {

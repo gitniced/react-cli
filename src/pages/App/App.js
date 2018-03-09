@@ -11,9 +11,8 @@ export default class App extends Component {
     return (
       <div className="home-container">
         <LeftMenu>
-          <ul>
-            <li><Link to="/lifecycle">生命周期展示</Link></li>
-          </ul>
+          <h4>React</h4>
+          <Link class="level-2" to="/lifecycle">生命周期展示</Link>
         </LeftMenu>
         <div className="main-content">
           { getRouter() }

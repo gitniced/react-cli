@@ -20,7 +20,7 @@ const createComponent = component => props => (
 const getRouter = () => (
   <Switch>
     <Route exact path="/" component={createComponent(Home)} />
-    <Route exact path="/mall" component={createComponent(Mall)} />
+    <Route path="/mall" component={createComponent(Mall)} />
     <Route path="/userinfo" component={createComponent(UserInfo)} />
     <Route path="/lifecycle" component={createComponent(LifeCycle)} />
   </Switch>
