@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Bundle from "./Bundle";
 
 import Home from "bundle-loader?lazy&name=home!pages/Home/Home";
-import Context from "bundle-loader?lazy&name=context!pages/Context/Context";
+import Context from "bundle-loader?lazy&name=context!pages/React/Context/Context";
 import UserInfo from "bundle-loader?lazy&name=userinfo!pages/UserInfo/UserInfo";
-import LifeCycle from "bundle-loader?lazy&name=lifecycle!pages/LifeCycle/LifeCycle";
+import LifeCycle from "bundle-loader?lazy&name=lifecycle!pages/React/LifeCycle/LifeCycle";
 const Loading = function() {
   return <div>Loading...</div>;
 };
