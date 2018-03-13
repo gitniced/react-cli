@@ -34,8 +34,8 @@ export default class LifeCycle extends Component {
           <li> <span className="font-weight-bold">constructor： </span>初始state, 绑定函数this</li>
           <li> <span className="font-weight-bold">getlnitialState：</span> 初始state（React. createClass 方法创造的组件类）</li>
           <li> <span className="font-weight-bold">getDefaultProps：</span> 返回值可以作为 props 的初始值（React. createClass 方法创造的组件类）</li>
-          <li> <span className="font-weight-bold">componentWillMount:</span> this.setState 修改状态也不会引发重新绘制</li> 
-          <li> <span className="font-weight-bold">render</span></li> 
+          <li> <span className="font-weight-bold">componentWillMount:</span> this.setState 修改状态也不会引发重新绘制, 进行组件的启动工作</li> 
+          <li> <span className="font-weight-bold">render</span> 渲染Dom节点</li> 
           <li> <span className="font-weight-bold">componentDidMount:</span> 不是紧跟 render ,在当前页面的所有组件 render 后执行</li> 
         </ul>
         <hr/> 

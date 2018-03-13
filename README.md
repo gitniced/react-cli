@@ -28,3 +28,5 @@ A: 是对ES7一些提案的支持, stage-0包含stage-1, stage-2以及stage-3的
 
 
 ## React-router
+
+伪 Router 路由组件的思考

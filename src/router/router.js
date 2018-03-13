@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Bundle from "./Bundle";
 
 import Home from "bundle-loader?lazy&name=home!pages/Home/Home";
-import Mall from "bundle-loader?lazy&name=mall!pages/Mall/Mall";
+import Context from "bundle-loader?lazy&name=context!pages/Context/Context";
 import UserInfo from "bundle-loader?lazy&name=userinfo!pages/UserInfo/UserInfo";
 import LifeCycle from "bundle-loader?lazy&name=lifecycle!pages/LifeCycle/LifeCycle";
 const Loading = function() {
@@ -20,7 +20,7 @@ const createComponent = component => props => (
 const getRouter = () => (
   <Switch>
     <Route exact path="/" component={createComponent(Home)} />
-    <Route path="/mall" component={createComponent(Mall)} />
+    <Route path="/context" component={createComponent(Context)} />
     <Route path="/userinfo" component={createComponent(UserInfo)} />
     <Route path="/lifecycle" component={createComponent(LifeCycle)} />
   </Switch>

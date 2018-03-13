@@ -12,10 +12,13 @@ export default class App extends Component {
       <div className="home-container">
         <LeftMenu>
           <h4>React</h4>
-          <Link class="level-2" to="/lifecycle">生命周期展示</Link>
+          <Link className="level-2" to="/lifecycle">生命周期展示</Link>
+          <Link className="level-2" to="/context">context</Link>
         </LeftMenu>
         <div className="main-content">
-          { getRouter() }
+          <div className="main-wrapper">
+            { getRouter() }
+          </div>
         </div>
       </div>
     )
