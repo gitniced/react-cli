@@ -36,6 +36,14 @@ class Content extends Component {
   }
 }
 
+
+
+
+
+
+
+
+
 class ThemeSwitch extends Component {
   static contextTypes = {
     store: PropTypes.object
@@ -65,6 +73,7 @@ class ThemeSwitch extends Component {
     )
   }
 }
+
 const mapDispatchToProps = (dispatch) => {
   return {
     changeTheme: (e) => {
@@ -78,6 +87,15 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 ThemeSwitch = connect(() => {}, mapDispatchToProps)(ThemeSwitch);
+
+
+
+
+
+
+
+
+
 
 class Header extends Component {
   static contextTypes = {
