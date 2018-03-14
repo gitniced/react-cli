@@ -41,20 +41,18 @@ export default class LifeCycle extends Component {
         <hr/> 
         <h5 className="text-primary">更新过程</h5>
         <ul>
-          <li> <span className="font-weight-bold">componentWillReceiveProps(nextProp)：</span> 只要是父组件的 render 函数被调用，在 render 函数里面被谊染的子组件就会 历更新过程，不管父组件传给子组件的 props 有没有改变</li>
+          <li> 
+            <span className="font-weight-bold">componentWillReceiveProps(nextProp)：</span> 只要是父组件的 render 函数被调用，在 render 函数里面被谊染的子组件就会 历更新过程，不管父组件传给子组件的 props 有没有改变
+            <p>看控制台输出</p>
+            <Counter caption={this.state.data} changeProps={this.changeProps}></Counter><br/>
+          </li>
           <li> <span className="font-weight-bold">shouldComponentUpdate(nextProp, nextState)：</span> 如果这个函数返回
 true ，那就会继续更新过程，接下来调用 render 函数</li>
           <li> <span className="font-weight-bold">componentWillUpdate：</span></li>
           <li> <span className="font-weight-bold">render</span></li> 
           <li> <span className="font-weight-bold">componentDidUpdate:</span> </li> 
         </ul>
-        <br/>
-        <h6>
-          componentWillReceiveProps：实例
-        </h6>
-        <p>看控制台输出</p>
-        <Counter caption={this.state.data} changeProps={this.changeProps}></Counter>
-        <br/>
+        <hr/> 
         <h5 className="text-primary">卸载过程</h5>
         <ul>
           <li> <span className="font-weight-bold">omponentWillUnmount</span> </li>

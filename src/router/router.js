@@ -7,6 +7,8 @@ import Home from "bundle-loader?lazy&name=home!pages/Home/Home";
 import Context from "bundle-loader?lazy&name=context!pages/React/Context/Context";
 import UserInfo from "bundle-loader?lazy&name=userinfo!pages/UserInfo/UserInfo";
 import LifeCycle from "bundle-loader?lazy&name=lifecycle!pages/React/LifeCycle/LifeCycle";
+
+import ReduxBasic from "bundle-loader?lazy&name=lifecycle!pages/Redux/Basic/Basic";
 const Loading = function() {
   return <div>Loading...</div>;
 };
@@ -23,6 +25,7 @@ const getRouter = () => (
     <Route path="/context" component={createComponent(Context)} />
     <Route path="/userinfo" component={createComponent(UserInfo)} />
     <Route path="/lifecycle" component={createComponent(LifeCycle)} />
+    <Route path="/reduxbasic" component={createComponent(ReduxBasic)} />
   </Switch>
 );
 

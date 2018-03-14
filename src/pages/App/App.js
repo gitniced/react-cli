@@ -15,6 +15,7 @@ export default class App extends Component {
           <Link className="level-2" to="/lifecycle">生命周期展示</Link>
           <Link className="level-2" to="/context">context</Link>
           <h4>Redux</h4>
+          <Link className="level-2" to="/reduxbasic">实现 Redux</Link>          
         </LeftMenu>
         <div className="main-content">
           <div className="main-wrapper">
