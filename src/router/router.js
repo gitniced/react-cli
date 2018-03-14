@@ -8,7 +8,8 @@ import Context from "bundle-loader?lazy&name=context!pages/React/Context/Context
 import UserInfo from "bundle-loader?lazy&name=userinfo!pages/UserInfo/UserInfo";
 import LifeCycle from "bundle-loader?lazy&name=lifecycle!pages/React/LifeCycle/LifeCycle";
 
-import ReduxBasic from "bundle-loader?lazy&name=lifecycle!pages/Redux/Basic/Basic";
+import ReduxBasic from "bundle-loader?lazy&name=redux!pages/Redux/Basic/Basic";
+import ReactRedux from "bundle-loader?lazy&name=redux!pages/Redux/ReactRedux/ReactRedux";
 const Loading = function() {
   return <div>Loading...</div>;
 };
@@ -26,6 +27,7 @@ const getRouter = () => (
     <Route path="/userinfo" component={createComponent(UserInfo)} />
     <Route path="/lifecycle" component={createComponent(LifeCycle)} />
     <Route path="/reduxbasic" component={createComponent(ReduxBasic)} />
+    <Route path="/reactredux" component={createComponent(ReactRedux)} />
   </Switch>
 );
 
