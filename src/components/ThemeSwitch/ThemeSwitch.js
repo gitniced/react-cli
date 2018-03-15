@@ -98,10 +98,6 @@ ThemeSwitch = connect(() => {}, mapDispatchToProps)(ThemeSwitch);
 
 
 class Header extends Component {
-  static contextTypes = {
-    store: PropTypes.object
-  }
-
   render () {
     return (
       <h1 style={{ color: this.props.themeColor }}>测试</h1>
