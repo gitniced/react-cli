@@ -35,7 +35,7 @@ const commonConfig = {
       use: [{
           loader: 'url-loader',
           options: {
-              limit: 8192
+            limit:8192
           }
       }]
     }]

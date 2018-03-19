@@ -18,6 +18,7 @@ export default class App extends Component {
           <Link className="level-2" to="/reduxbasic">Redux 概念</Link>          
           <Link className="level-2" to="/reduxachieve">实现 Redux</Link>          
           <Link className="level-2" to="/reactredux">react-redux</Link>          
+          <Link className="level-2" to="/middleware">ApplyMiddleware</Link>          
         </LeftMenu>
         <div className="main-content">
           <div className="main-wrapper">

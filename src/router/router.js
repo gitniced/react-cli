@@ -11,6 +11,8 @@ import LifeCycle from "bundle-loader?lazy&name=lifecycle!pages/React/LifeCycle/L
 import ReduxBasic from "bundle-loader?lazy&name=redux!pages/Redux/Basic/Basic";
 import ReactRedux from "bundle-loader?lazy&name=redux!pages/Redux/ReactRedux/ReactRedux";
 import ReduxAchieve from "pages/Redux/Achieve/Achieve";
+import Middleware from "pages/Redux/Middleware/Middleware";
+
 const Loading = function() {
   return <div>Loading...</div>;
 };
@@ -30,6 +32,7 @@ const getRouter = () => (
     <Route path="/reduxbasic" component={createComponent(ReduxBasic)} />
     <Route path="/reactredux" component={createComponent(ReactRedux)} />
     <Route path="/reduxachieve" component={ReduxAchieve} />
+    <Route path="/middleware" component={Middleware} />
   </Switch>
 );
 
