@@ -34,6 +34,40 @@ f1( f2(f3(store.dispatch))) )(action)
 f1( next )(action)
 `}
           </code>
+          <code>
+{`
+// 例子
+store = {
+	dispatch: (action)=>{ console.log(%c dispatch $ {action},'color: red') }
+}
+
+f1 = (store) => (next) => action => {
+  console.log('1-top');
+  {/* store.dispatch(action); */}
+  next(action);
+  console.log('1-bottom');
+}
+
+f2 = (store) =>(next) => action => {
+  console.log('2-top');
+  next(action);
+  console.log('2-bottom');
+}
+
+f3 = (store) =>(next) => action => {
+  console.log('3-top');
+  next(action);
+  console.log('3-bottom');
+}
+
+function compose(...funcs) {
+  return arg => funcs.reduceRight((composed, f) => {
+		return f(composed)
+	}, arg);
+}
+
+compose(...[f1(store),f2(store),f3(store)])((action) => console.log(%c dispatch $ {action},'color: red'))('action')`}
+          </code>
         </div>
         <p>Q2：什么时候在<code> middleware </code>里使用 <code> store.dispatch </code></p>
         <div className="code-content">
